@@ -1,5 +1,6 @@
-## Atividade prática
+## Atividade 2
 Criar uma classe Aluno. Sobre um aluno devem ser guardados:
+
 - Nome
 - Idade
 - Nota
