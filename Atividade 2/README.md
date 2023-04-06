@@ -5,5 +5,6 @@ Criar uma classe Aluno. Sobre um aluno devem ser guardados:
 - Nota
 
 Utilize o TAD Vetor, adaptando-o para armazenar Alunos;
+
 Adapte os métodos “adiciona”, “tamanho” e “contem” para o
 contexto de Alunos;
