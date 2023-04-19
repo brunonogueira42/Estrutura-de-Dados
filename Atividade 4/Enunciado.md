@@ -1,7 +1,5 @@
 ## Atividade 4
 
-- Implemente um TAD LSE genérica de modo que seja possível inserir Alunos ou quaisquer outros tipos de objetos.
+- 1.Adapte o programa exemplificado em aula para um novo programa, incluindo implementações para IVetorAluno,  para um Vetor de Alunos.
 
-- Implemente um método para fazer a impressão da lista.
-
-- Poste sua implementação no github e relate suas experiências no PIA. Atenção: não esqueça do PIA!!!
+- 2.Crie uma classe Vetor que permita armazenar qualquer objeto dentro do vetor.

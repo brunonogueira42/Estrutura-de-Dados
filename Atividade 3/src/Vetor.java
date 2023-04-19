@@ -1,31 +1,40 @@
 public class Vetor {
-    private Object vetor[] = new Object[5];
-	private int tam = 0;
-	
-	public void adiciona(Object objeto) {
-		this.vetor[tam] = objeto;
-		tam++;
-	}
-	
-	public int tamanho() {
-		return tam;
-	}
-	
-	public boolean contem(Object objeto) {
-		for(int i=0; i < this.tam; i++) {
-			if(this.vetor[i] == objeto) {
-				return true;
-			}
-		}
-		return false;
-	}
+    private int tam;
+    private Aluno[] alunos;
+    private int cont;
+
+    public Vetor(int tam) {
+        this.tam = tam;
+        this.alunos = new Aluno[tam];
+        this. cont = 0;
+    }
+
+    public int tamanho() { return tam; }
+
+    public void adiciona(Aluno aluno) {
+        if(cont >= tam) {
+            System.out.println("ERRO - Vetor Cheio");
+        }
+        else{
+            alunos[cont] = aluno;
+        cont++;
+        }
+    }
+
+    public boolean contem(Aluno aluno) {
+        for(int i = 0; i < cont; i++) {
+            if(alunos[i].getNome().equals(aluno.getNome())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public String toString() {
-        String str = "";
-
-        for(int i=0; i < tam; i++) {
-            str += "\n"+(i+1)+": "+vetor[i];
-		}
-        return str;
+        String dados = "";
+        for(int i = 0; i < cont; i++) {
+            dados += "Nome: " + alunos[i].getNome() + " | Idade: " + alunos[i].getIdade() + " | Nota: " + alunos[i].getNota() + "\n";
+        }
+        return dados;
     }
 }

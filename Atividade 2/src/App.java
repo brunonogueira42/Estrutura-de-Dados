@@ -1,17 +1,22 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Vetor alunos = new Vetor(3);
-        Aluno aluno;
+        PontoCartesiano ponto1 = new PontoCartesiano(1, 2);
+        PontoCartesiano ponto2 = new PontoCartesiano(3, 4);
 
-        aluno = new Aluno("Bruno", 20, 10);
-        alunos.adiciona(aluno);
+        double distancia = ponto1.Euclidiana(ponto1, ponto2);
+        System.out.println("Distancia entre "+ponto1.toString()+" e "+ponto2.toString()+" é: "+distancia);
 
-        aluno = new Aluno("Gabriel");
-        alunos.adiciona(aluno);
+        ponto1 = new PontoCartesiano(2, 2);
+        ponto2 = new PontoCartesiano(2, 2);
 
-        aluno = new Aluno("Lucas", 22, 8.6);
-        alunos.adiciona(aluno);
+        distancia = ponto1.Euclidiana(ponto1, ponto2);
+        System.out.println("Distancia entre "+ponto1.toString()+" e "+ponto2.toString()+" é: "+distancia);
 
-        System.out.println(alunos.toString());
+        ponto1 = new PontoCartesiano(4.2, 5.8);
+        ponto2 = new PontoCartesiano(7.3, 1.6);
+
+        distancia = ponto1.Euclidiana(ponto1, ponto2);
+        System.out.println("Distancia entre "+ponto1.toString()+" e "+ponto2.toString()+" é: "+distancia);
+
     }
 }

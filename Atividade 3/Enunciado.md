@@ -1,5 +1,11 @@
 ## Atividade 3
+Criar uma classe Aluno. Sobre um aluno devem ser guardados:
 
-- 1.Adapte o programa exemplificado em aula para um novo programa, incluindo implementações para IVetorAluno,  para um Vetor de Alunos.
+- Nome
+- Idade
+- Nota
 
-- 2.Crie uma classe Vetor que permita armazenar qualquer objeto dentro do vetor.
+Utilize o TAD Vetor, adaptando-o para armazenar Alunos;
+
+Adapte os métodos “adiciona”, “tamanho” e “contem” para o
+contexto de Alunos;

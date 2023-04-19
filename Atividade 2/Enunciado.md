@@ -1,11 +1,8 @@
 ## Atividade 2
-Criar uma classe Aluno. Sobre um aluno devem ser guardados:
 
-- Nome
-- Idade
-- Nota
+Implemente o TAD PontoCartesiano em Java
 
-Utilize o TAD Vetor, adaptando-o para armazenar Alunos;
-
-Adapte os métodos “adiciona”, “tamanho” e “contem” para o
-contexto de Alunos;
+- Crie um método construtor;
+- Getters e Setters;
+- Crie um método que calcule a distância euclidiana entre dois pontos;
+- Teste esse TAD em uma classe Main.
