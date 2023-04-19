@@ -20,4 +20,9 @@ public class Aluno {
     public void setNome(String nome) { this.nome = nome; }
     public void setIdade(int idade) { this.idade = idade; }
     public void setNota(double nota) { this.nota = nota; }
+    
+    public String toString() {
+        String str = "Nome: "+nome+" | Idade: "+idade+" | Nota: "+nota;
+        return str;
+    }
 }
