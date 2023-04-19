@@ -77,7 +77,7 @@ public class LSE implements ILista {
         String str = "\n";
         Noh obj = inicio;
 
-        while (obj != null) {
+        while(obj != null) {
             str += "- "+obj.getInfo()+"\n";
             obj = obj.getProximo();
         }
