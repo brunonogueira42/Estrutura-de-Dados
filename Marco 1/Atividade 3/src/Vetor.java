@@ -17,7 +17,7 @@ public class Vetor {
         }
         else{
             alunos[cont] = aluno;
-        cont++;
+            cont++;
         }
     }
 
