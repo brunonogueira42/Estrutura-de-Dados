@@ -33,7 +33,7 @@ public class Vetor {
     public String toString() {
         String dados = "";
         for(int i = 0; i < cont; i++) {
-            dados += alunos[i].toString();
+            dados += alunos[i].toString()+"\n";
         }
         return dados;
     }
