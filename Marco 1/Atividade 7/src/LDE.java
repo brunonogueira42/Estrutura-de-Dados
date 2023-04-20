@@ -56,10 +56,6 @@ public class LDE implements ILista {
     public boolean remove(Object info) {
         Noh p = busca(info);
 
-        while(p!=null && p.getInfo() != info) {
-            p = p.getProximo(); 
-        }
-
         if(p==null) {
             return false;
         }
