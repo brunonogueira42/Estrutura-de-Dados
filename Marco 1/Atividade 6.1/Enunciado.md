@@ -1,4 +1,4 @@
-## Atividade 6
+## Atividade 6.1
 
 - Implemente um TAD LDE que armazena inteiros;
 

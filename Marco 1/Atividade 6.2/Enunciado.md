@@ -1,4 +1,4 @@
-## Atividade 7
+## Atividade 6.2
 
 -Implemente um TAD LDE genérica (Object);
 
