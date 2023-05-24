@@ -1,5 +1,5 @@
 
-public interface ILista {
+public interface ILista5 {
   public void insereInicio(int info);
 
   public void insereFim(int info);

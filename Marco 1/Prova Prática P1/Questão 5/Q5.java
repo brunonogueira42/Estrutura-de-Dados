@@ -1,7 +1,7 @@
 
 public class Q5 {
   public static void main(String[] args) throws Exception {
-    LDE lista = new LDE();
+    LDE5 lista = new LDE5();
 
     lista.insereInicio(42); //par
     lista.insereInicio(4); //par

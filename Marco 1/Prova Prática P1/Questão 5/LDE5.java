@@ -1,19 +1,19 @@
 
-public class LDE implements ILista {
-  private Noh inicio;
-  private Noh fim;
+public class LDE5 implements ILista5 {
+  private Noh5 inicio;
+  private Noh5 fim;
 
-  public LDE () {
+  public LDE5 () {
     this.inicio = null;
     this.fim = null;
   }
 
   public void insereInicio(int info) { 
-    Noh novo = new Noh(info);
+    Noh5 novo = new Noh5(info);
 
     if(inicio == null) {
       inicio = novo;
-      fim= novo;
+      fim = novo;
     }
     else {
       novo.setProximo(inicio);
@@ -23,7 +23,7 @@ public class LDE implements ILista {
   }
 
   public void insereFim(int info) { 
-    Noh novo = new Noh(info);
+    Noh5 novo = new Noh5(info);
 
     if(inicio == null){
       inicio = novo;
@@ -44,8 +44,8 @@ public class LDE implements ILista {
     return false;
   }
 
-  private Noh busca(int info) {
-    Noh p = inicio;
+  private Noh5 busca(int info) {
+    Noh5 p = inicio;
 
     while (p != null && p.getInfo() != info) {
       p = p.getProximo();
@@ -55,7 +55,7 @@ public class LDE implements ILista {
   }
   
   public boolean remove(int info) {
-    Noh p = busca(info);
+    Noh5 p = busca(info);
 
     while(p != null && p.getInfo() != info) {
       p = p.getProximo(); 
@@ -88,7 +88,7 @@ public class LDE implements ILista {
   public int tamanho() { 
     int tam = 0;
 
-    for(Noh i = inicio; i != null; i = i.getProximo()) {
+    for(Noh5 i = inicio; i != null; i = i.getProximo()) {
       tam++;
     }
       
@@ -97,7 +97,7 @@ public class LDE implements ILista {
 
   public String inicioFim() {
     String str = "\n";
-    Noh obj = inicio;
+    Noh5 obj = inicio;
 
     while(obj != null) {
       str += "- "+obj.getInfo()+"\n";
@@ -109,7 +109,7 @@ public class LDE implements ILista {
 
   public String fimInicio() {
     String str = "\n";
-    Noh obj = fim;
+    Noh5 obj = fim;
 
     while(obj != null) {
       str += "- "+obj.getInfo()+"\n";
@@ -134,7 +134,7 @@ public class LDE implements ILista {
   public int nroPares(){
     int pares = 0;
 
-    for(Noh i = inicio; i != null; i = i.getProximo()) {
+    for(Noh5 i = inicio; i != null; i = i.getProximo()) {
       if(i.getInfo() % 2 == 0) {
         pares++;
       }
