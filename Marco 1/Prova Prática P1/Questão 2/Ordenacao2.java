@@ -1,8 +1,8 @@
 
-public class Ordenacao {
+public class Ordenacao2 {
   private float valor[];
 
-  public Ordenacao(float valor[]) {
+  public Ordenacao2(float valor[]) {
     this.valor = valor;
   }
 
