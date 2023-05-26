@@ -140,13 +140,13 @@ public class LDE6 implements ILista6 {
       fim = novo;
       cont++;
     }
-    else if (info <= inicio.getInfo()) {
+    else if(info <= inicio.getInfo()) {
       novo.setProximo(inicio);
       inicio.setAnterior(novo);
       inicio = novo;
       cont++;
     }
-    else if (info >= fim.getInfo()) {
+    else if(info >= fim.getInfo()) {
       novo.setAnterior(fim);
       fim.setProximo(novo);
       fim = novo;
@@ -157,7 +157,7 @@ public class LDE6 implements ILista6 {
       Noh6 aux;
       cont++;
 
-      while (meio != null && info > meio.getInfo()) {
+      while(meio != null && info > meio.getInfo()) {
         meio = meio.getProximo();
         cont++;
       }
