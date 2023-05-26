@@ -1,15 +1,15 @@
 
-public class LDE5 implements ILista5 {
-  private Noh5 inicio;
-  private Noh5 fim;
+public class LDE6 implements ILista6 {
+  private Noh6 inicio;
+  private Noh6 fim;
 
-  public LDE5 () {
+  public LDE6() {
     this.inicio = null;
     this.fim = null;
   }
 
   public void insereInicio(int info) { 
-    Noh5 novo = new Noh5(info);
+    Noh6 novo = new Noh6(info);
 
     if(inicio == null) {
       inicio = novo;
@@ -23,7 +23,7 @@ public class LDE5 implements ILista5 {
   }
 
   public void insereFim(int info) { 
-    Noh5 novo = new Noh5(info);
+    Noh6 novo = new Noh6(info);
 
     if(inicio == null){
       inicio = novo;
@@ -44,8 +44,8 @@ public class LDE5 implements ILista5 {
     return false;
   }
 
-  private Noh5 busca(int info) {
-    Noh5 p = inicio;
+  private Noh6 busca(int info) {
+    Noh6 p = inicio;
 
     while (p != null && p.getInfo() != info) {
       p = p.getProximo();
@@ -55,7 +55,7 @@ public class LDE5 implements ILista5 {
   }
   
   public boolean remove(int info) {
-    Noh5 p = busca(info);
+    Noh6 p = busca(info);
 
     while(p != null && p.getInfo() != info) {
       p = p.getProximo(); 
@@ -88,7 +88,7 @@ public class LDE5 implements ILista5 {
   public int tamanho() { 
     int tam = 0;
 
-    for(Noh5 i = inicio; i != null; i = i.getProximo()) {
+    for(Noh6 i = inicio; i != null; i = i.getProximo()) {
       tam++;
     }
       
@@ -97,7 +97,7 @@ public class LDE5 implements ILista5 {
 
   public String inicioFim() {
     String str = "\n";
-    Noh5 obj = inicio;
+    Noh6 obj = inicio;
 
     while(obj != null) {
       str += "- "+obj.getInfo()+"\n";
@@ -109,7 +109,7 @@ public class LDE5 implements ILista5 {
 
   public String fimInicio() {
     String str = "\n";
-    Noh5 obj = fim;
+    Noh6 obj = fim;
 
     while(obj != null) {
       str += "- "+obj.getInfo()+"\n";
@@ -131,15 +131,46 @@ public class LDE5 implements ILista5 {
     return str;
   }
 
-  public int nroPares(){
-    int pares = 0;
+  public int add_ordenado(int info) {
+    Noh6 novo = new Noh6(info);
+    int cont = 0;
 
-    for(Noh5 i = inicio; i != null; i = i.getProximo()) {
-      if(i.getInfo() % 2 == 0) {
-        pares++;
-      }
+    if(inicio == null) {
+      inicio = novo;
+      fim = novo;
+      cont++;
     }
+    else if (info <= inicio.getInfo()) {
+      novo.setProximo(inicio);
+      inicio.setAnterior(novo);
+      inicio = novo;
+      cont++;
+    }
+    else if (info >= fim.getInfo()) {
+      novo.setAnterior(fim);
+      fim.setProximo(novo);
+      fim = novo;
+      cont++;
+    }
+    else {
+      Noh6 meio = inicio.getProximo();
+      Noh6 aux;
+      cont++;
+
+      while (meio != null && info > meio.getInfo()) {
+        meio = meio.getProximo();
+        cont++;
+      }
+
+      aux = meio.getAnterior();
+
+      novo.setProximo(meio);
+      novo.setAnterior(aux);
       
-    return pares;
+      aux.setProximo(novo);
+      meio.setAnterior(novo);
+    }
+    
+    return cont;
   }
 }
