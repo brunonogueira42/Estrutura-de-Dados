@@ -130,4 +130,22 @@ public class LDE8 implements ILista8 {
 
     return str;
   }
+
+  public void concat(LDE8 l) {
+    if (l.estahVazia()) {
+      return;
+    }
+    if(this.estahVazia()) {
+      this.inicio = l.inicio;
+      this.fim = l.fim;
+    } 
+    else {
+      this.fim.setProximo(l.inicio);
+      l.inicio.setAnterior(this.fim);
+      this.fim = l.fim;
+      
+      l.inicio = null;
+      l.fim = null;
+    }
+  }
 }
