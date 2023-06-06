@@ -1,3 +1,4 @@
+
 public class App {
     public static void main(String[] args) throws Exception {
         PontoCartesiano ponto1 = new PontoCartesiano(1, 2);

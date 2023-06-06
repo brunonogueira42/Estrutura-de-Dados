@@ -1,6 +1,7 @@
+
 public class App {
     public static void main(String[] args) throws Exception {
-        Fila fila = new Fila();
+        Fila fila = new Fila(5);
 
         System.out.println("Vazio? "+fila.isEmpty());
         System.out.println("Tamanho: "+fila.size());
