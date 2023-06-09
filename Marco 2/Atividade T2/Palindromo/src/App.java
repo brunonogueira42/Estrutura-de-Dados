@@ -13,7 +13,7 @@ public class App {
         }
 
         //O método ignora letras maiúsculas, espaços em branco, acentos e pontuação
-        // Exemplos
+        // Exemplos:
         // Arara
         // Subi         no ônibus.
         // Socorram-me! subi no ônibus em Marrocos.
